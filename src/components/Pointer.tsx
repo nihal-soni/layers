@@ -1,6 +1,5 @@
 import mousePointer from "@/assets/images/mouse-pointer.svg";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
 
 export default function Pointer(props: {
   name: string;
@@ -11,7 +10,7 @@ export default function Pointer(props: {
   return (
     <div className="relative inline-flex items-center">
       <div className="">
-        <Image
+        <img
           src={mousePointer.src}
           alt="mouse pointer"
           className="size-5 invert"
@@ -19,8 +18,8 @@ export default function Pointer(props: {
       </div>
       <div
         className={twMerge(
-          "inline-flex rounded-full font-bold text-sm px-2 rounded-tl-none",
-          color === "red" ? "bg-red-500" : "bg-blue-400"
+          "inline-flex rounded-full rounded-tl-none px-2 text-sm font-bold",
+          color === "red" ? "bg-red-500" : "bg-blue-400",
         )}
       >
         {name}
